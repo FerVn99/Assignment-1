@@ -24,10 +24,11 @@ contract zkuNFT is ERC721("NFT", "ZKU"), MerkleProof {
             _NFTname,
             _NFTdescription
         );
-        bytes32 newMintHash = keccak256(
+        
+        bytes32 MintHash = keccak256(
             abi.encodePacked(msg.sender, to, newId, _NFTname, _NFTdescription)
         );
-        addLeaf(newMintHash);
+        addLeaf(MintHash);
         _tokenMetadata[newId] = _metadata;
         return newId;
     }
