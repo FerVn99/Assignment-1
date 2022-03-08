@@ -1,4 +1,3 @@
-// SPDX-License-Identifier: MIT
 //Code from https://solidity-by-example.org/app/merkle-tree/
 
 pragma solidity >=0.7.0 <0.9.0;
